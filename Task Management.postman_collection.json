@@ -1,0 +1,212 @@
+{
+	"info": {
+		"_postman_id": "31a8e253-f517-4f42-9faa-6b4ca26882ee",
+		"name": "Task Management",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "34621324"
+	},
+	"item": [
+		{
+			"name": "http://localhost:3000/api/auth/register",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"Mangesh Mahajan\",\r\n  \"email\": \"mangesh.mahajan@gmail.com\",\r\n  \"password\": \"MangeshSM\",\r\n  \"role\": \"Admin\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/auth/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"auth",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/api/auth/login",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"email\": \"mangesh.mahajan@gmail.com\",\r\n  \"password\": \"MangeshSM\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/auth/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/api/tasks",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2M2ZDk4YjM4NDI1MTUyOTcyYzdhNGQiLCJyb2xlIjoiTWFuYWdlciIsImlhdCI6MTc0MTA4NTM3MSwiZXhwIjoxNzQxMDg4OTcxfQ.zeflHsSCjrl-QybYtCkWCyN5ER-CtoIppzomhFgKN1I",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"title\": \"User Project\",\r\n  \"description\": \"Finish the backend API\",\r\n  \"status\": \"Pending\",\r\n  \"assignee\": \"67c6d9ee38425152972c7a58\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/tasks",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"tasks"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/api/tasks",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2M2ZDk4YjM4NDI1MTUyOTcyYzdhNGQiLCJyb2xlIjoiTWFuYWdlciIsImlhdCI6MTc0MTA4NTM3MSwiZXhwIjoxNzQxMDg4OTcxfQ.zeflHsSCjrl-QybYtCkWCyN5ER-CtoIppzomhFgKN1I",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/api/tasks",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"tasks"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/api/tasks/67c6d05d2d828544f45821e8",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2M2ZDk4YjM4NDI1MTUyOTcyYzdhNGQiLCJyb2xlIjoiTWFuYWdlciIsImlhdCI6MTc0MTA4NTM3MSwiZXhwIjoxNzQxMDg4OTcxfQ.zeflHsSCjrl-QybYtCkWCyN5ER-CtoIppzomhFgKN1I",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"status\": \"Inprogres\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/tasks/67c6d9ae38425152972c7a50",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"tasks",
+						"67c6d9ae38425152972c7a50"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/api/tasks/67c6d05d2d828544f45821e8",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2M2ZDk4YjM4NDI1MTUyOTcyYzdhNGQiLCJyb2xlIjoiTWFuYWdlciIsImlhdCI6MTc0MTA4NTM3MSwiZXhwIjoxNzQxMDg4OTcxfQ.zeflHsSCjrl-QybYtCkWCyN5ER-CtoIppzomhFgKN1I",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/api/tasks/67c6d9ae38425152972c7a50",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"tasks",
+						"67c6d9ae38425152972c7a50"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

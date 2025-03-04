@@ -1,0 +1,26 @@
+Tasks :
+ 
+1. Objective: Design the database schema and interact with it using Mongoose.
+ 
+    Database schema:
+        User: _id, name, role, email, password.
+        Task: _id, title, description, status (e.g., Pending, Completed), assignee (reference to a User), createdBy.
+ 
+    Implement indexes for frequent queries (e.g., on assignee and createdBy).
+ 
+    Seed the database with sample data.
+ 
+2. API Development and Role Management
+ 
+Objective: Implement role-based access control (RBAC) and build RESTful APIs.
+ 
+    Endpoints to implement:
+        POST /tasks - Create a new task (accessible to Admin and Manager roles).
+        GET /tasks - Retrieve a list of tasks assigned to the current user (accessible to all roles).
+        PUT /tasks/:id - Update a task (only Admin or the Manager who created it can update).
+        DELETE /tasks/:id - Delete a task (only Admin can delete).
+ 
+    Requirements:
+        Use middleware to enforce RBAC.
+        Validate input using any library or custom validation logic.
+        Implement pagination for the /tasks endpoint.
